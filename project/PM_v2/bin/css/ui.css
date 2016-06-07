@@ -1,0 +1,21 @@
+.button {
+	-fx-font-size: 10px;
+	-fx-background-color: #d7e7fd;
+	-fx-border-color: #5597f1;
+	-fx-border-width: 1px;
+} 
+
+.button:hover {
+	-fx-font-size: 10px;
+	-fx-background-color: #d7e7fd;
+	-fx-border-color: #5597f1;
+	-fx-border-width: 1px;
+	-fx-effect: dropshadow(one-pass-box, #2a6dc8, 8, 0.0, 2, 0);
+} 
+
+.button:focused {
+	-fx-font-size: 10px;
+	-fx-background-color: #d7e7fd;
+	-fx-border-color: #5597f1;
+	-fx-border-width: 2px;
+} 

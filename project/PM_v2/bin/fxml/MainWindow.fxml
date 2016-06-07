@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.web.WebView?>
+
+<GridPane id="basic_pane" hgap="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="640.0" vgap="2.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="358.0" minHeight="10.0" prefHeight="358.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="秘钥管理">
+               <content>
+                  <GridPane id="tab_1_content" prefHeight="398.0" prefWidth="636.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="254.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="146.0" minHeight="-Infinity" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane id="tab_1_tip" prefHeight="200.0" prefWidth="200.0" />
+                        <ButtonBar prefHeight="40.0" prefWidth="616.0" GridPane.rowIndex="1">
+                           <buttons>
+                              <Button mnemonicParsing="false" onAction="#handleLoadKeyButton" text="导入秘钥文件" />
+                              <Button mnemonicParsing="false" onAction="#handleGenerateKeyButton" text="生成秘钥文件" />
+                           </buttons>
+                        </ButtonBar>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+          </Tab>
+          <Tab text="密码清单">
+               <content>
+                  <GridPane id="tab_2_content">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="145.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="260.0" minHeight="10.0" prefHeight="259.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TableView fx:id="table" editable="true" prefHeight="259.0" prefWidth="620.0" GridPane.rowIndex="1">
+                          <columns>
+                            <TableColumn fx:id="columnId" prefWidth="37.0" text="ID">
+                            	<cellValueFactory>
+                            		<PropertyValueFactory property="id" />
+                            	</cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="columnItem" prefWidth="134.0" text="项目">
+                            	<cellValueFactory>
+                            		<PropertyValueFactory property="item" />
+                            	</cellValueFactory>                            </TableColumn>
+
+                              <TableColumn fx:id="columnAccount" prefWidth="122.0" text="账户">
+                              	<cellValueFactory>
+                            		<PropertyValueFactory property="account" />
+                            	</cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="columnPassword" prefWidth="126.0" text="密码">
+                            	<cellValueFactory>
+                            		<PropertyValueFactory property="password" />
+                            	</cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="columnRemark" prefWidth="212.0" text="备注">
+                            	<cellValueFactory>
+                            		<PropertyValueFactory property="remark" />
+                            	</cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                           <GridPane.margin>
+                              <Insets left="4.0" right="4.0" />
+                           </GridPane.margin>
+                        </TableView>
+                        <GridPane>
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="86.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="0.0" prefWidth="82.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="79.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="38.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="159.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="442.0" minWidth="10.0" prefWidth="148.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="0.0" prefWidth="67.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="searchText" prefHeight="28.0" prefWidth="145.0" promptText="搜索关键字" GridPane.columnIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="2.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#handleSearchButton" prefHeight="28.0" prefWidth="57.0" text="搜索" GridPane.columnIndex="6">
+                                 <GridPane.margin>
+                                    <Insets left="2.0" right="4.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleAddButton" text="添加密码">
+                                 <GridPane.margin>
+                                    <Insets left="4.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleRefreshButton" text="刷新列表" GridPane.columnIndex="1" />
+                              <Button mnemonicParsing="false" text="删除条目" GridPane.columnIndex="2" onAction="#handleDeleteButton"/>
+                              <TextField GridPane.columnIndex="3" fx:id="deleteId"/>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </content>
+          </Tab>
+            <Tab text="密码生成">
+               <content>
+                  <GridPane id="tab_3_content">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane id="tab_3_generator">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <CheckBox fx:id="allowNum" mnemonicParsing="false" text="使用数字" GridPane.rowIndex="1" />
+                              <CheckBox fx:id="allowLowercase" mnemonicParsing="false" text="使用小写字母" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="allowUppercase" mnemonicParsing="false" text="使用大写字母" GridPane.rowIndex="3" />
+                              <CheckBox fx:id="allowSymbol" mnemonicParsing="false" text="使用常用符号" GridPane.rowIndex="4" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutY="20.0" text="密码位数" />
+                                    <TextField fx:id="figures" layoutX="65.0" layoutY="15.0" promptText="建议不低于六位" />
+                                 </children>
+                              </AnchorPane>
+                              <Button mnemonicParsing="false" onAction="#handleRandGenerateButton" text="确认生成" GridPane.rowIndex="5" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="180.0" right="180.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab text="备份">
+               <content>
+                  <GridPane id="tab_4_content">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane id="tab_4_sync">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="27.0" text="备份服务器地址" />
+                                    <TextField layoutX="112.0" layoutY="22.0" fx:id="serverHost"/>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="27.0" text="备份服务器端口" />
+                                    <TextField layoutX="112.0" layoutY="22.0" fx:id="serverPort"/>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Button layoutX="52.0" layoutY="21.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="155.0" text="开始同步" onAction="#handleSyncButton"/>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Button layoutX="50.0" layoutY="21.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="157.0" text="同步日志" onAction="#handleWatchLogButton"/>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="180.0" right="180.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab text="帮助">
+               <content>
+                  <WebView fx:id="webView" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="state" text="状态显示" GridPane.rowIndex="1" />
+   </children>
+   <padding>
+      <Insets bottom="2.0" />
+   </padding>
+</GridPane>

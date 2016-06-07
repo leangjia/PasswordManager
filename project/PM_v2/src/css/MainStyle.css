@@ -1,0 +1,48 @@
+#basic_pane {
+	-fx-background-color: #e8f2ff;
+}
+
+#tab_1_content {
+	-fx-border-width: 1px;
+	-fx-border-color: #8ab1e6;
+	-fx-background-color: #cad2dd;
+}
+
+#tab_2_content {
+	-fx-border-width: 1px;
+	-fx-border-color: #8ab1e6;
+	-fx-background-color: #cad2dd;
+}
+
+#tab_3_content {
+	-fx-border-width: 1px;
+	-fx-border-color: #8ab1e6;
+	-fx-background-color: #cad2dd;
+	-fx-background-image: url(../images/resource_02.png);
+	-fx-background-size: cover;
+}
+
+#tab_3_generator {
+	-fx-border-width: 1px;
+	-fx-border-color: #8ab1e6;
+	-fx-background-color: #9abae5;
+}
+
+#tab_4_content {
+	-fx-border-width: 1px;
+	-fx-border-color: #8ab1e6;
+	-fx-background-color: #cad2dd;
+	-fx-background-image: url(../images/resource_03.png);
+	-fx-background-size: cover;
+}
+
+#tab_4_sync {
+	-fx-border-width: 1px;
+	-fx-border-color: #8ab1e6;
+	-fx-background-color: #9abae5;
+}
+
+#tab_1_tip {
+	-fx-background-image: url(../images/resource_01.png);
+	-fx-background-size: cover;
+}
