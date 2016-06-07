@@ -8,7 +8,7 @@
 ##How to install
 * Make sure you have installed JRE8(supports Javafx) on your system and configure path correctly
 * Extract the .tar.bz2 file anywhere you want and use the shell script file to launch the application
-***
+
 # 桌面密码管理器
 ##统一管理密码的桌面程序，AES加密保证数据的安全
 ##特性
@@ -19,6 +19,6 @@
 ##如何安装并运行
 * 运行需要系统安装支持javafx的JRE8并正确配置环境变量
 * 将压缩文件解压到你需要的地方，并使用启动脚本运行程序
-***
+
 ###Screenshots 运行截图
 ![](screenshots/01.png)
