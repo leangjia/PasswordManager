@@ -358,7 +358,7 @@ public class MainWindowController implements Initializable
 	public void initialize(URL location, ResourceBundle resources)
 	{
 		WebEngine engine = webView.getEngine();
-		engine.load(new File("src/articles/help.html").toURI().toString());
+		engine.load(new File("articles/help.html").toURI().toString());
 		
 		File keyFile = new File(GlobalVar.homePath + "/" + GlobalVar.defaultKeyFileName);
 		if(keyFile.exists())
