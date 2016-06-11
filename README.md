@@ -1,6 +1,6 @@
 # PasswordManager_v2.1 Client
 ##Manage your password and keep it safe with AES
-[Latest Version Download](binary/v2.1/PM_v2.1.tar.bz2)
+[Latest Version Download](https://github.com/guiji9511/PasswordManager/tree/master/binary/v2.1)
 ###Features
 * manage your secret key
 * manage all your account and password
@@ -15,7 +15,7 @@
 
 # 桌面密码管理器2.1
 ##统一管理密码的桌面程序，AES加密保证数据的安全
-[最新版下载](binary/v2.1/PM_v2.1.tar.bz2)
+[最新版下载](https://github.com/guiji9511/PasswordManager/tree/master/binary/v2.1)
 ###特性
 * 秘钥管理
 * 管理所有账户密码
