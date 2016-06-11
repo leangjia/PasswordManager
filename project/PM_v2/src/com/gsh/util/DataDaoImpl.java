@@ -109,7 +109,7 @@ public class DataDaoImpl implements DataDao
 		Iterator i = root.elementIterator("user"); i.hasNext(); )
 		{
 		    Element node = (Element) i.next();
-		    if((decode(node.attributeValue("item")).indexOf(keyword) != -1) || (decode(node.attributeValue("account")).indexOf(keyword) != -1) || (decode(node.attributeValue("remark")).indexOf(keyword) != -1))
+		    if(StringUtil.includeIngnoreCase(decode(node.attributeValue("item")), keyword) || StringUtil.includeIngnoreCase(decode(node.attributeValue("account")), keyword) || StringUtil.includeIngnoreCase(decode(node.attributeValue("remark")), keyword))
 		    {
 		    	String id = node.attributeValue("id");
 		    	String account = decode(node.attributeValue("account"));
