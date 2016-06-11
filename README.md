@@ -6,9 +6,9 @@
 * manage all your account and password
 * synchronise data with your family on a local network server
 * encrypt data with AES 128
+* cross plateform
 
 ##Requirements
-* cross plateform
 * Make sure you have installed JRE8(supports Javafx) on your system and configure path correctly
 * Extract the .tar.bz2 file anywhere you want and use the shell script file to launch the application
 
