@@ -66,27 +66,27 @@
                      <children>
                         <TableView fx:id="table" editable="true" prefHeight="259.0" prefWidth="620.0" GridPane.rowIndex="1">
                           <columns>
-                            <TableColumn fx:id="columnId" prefWidth="37.0" text="ID">
+                            <TableColumn fx:id="columnId" prefWidth="29.0" text="ID">
                             	<cellValueFactory>
                             		<PropertyValueFactory property="id" />
                             	</cellValueFactory>
                             </TableColumn>
-                            <TableColumn fx:id="columnItem" prefWidth="134.0" text="项目">
+                            <TableColumn fx:id="columnItem" prefWidth="130.0" text="项目">
                             	<cellValueFactory>
                             		<PropertyValueFactory property="item" />
                             	</cellValueFactory>                            </TableColumn>
 
-                              <TableColumn fx:id="columnAccount" prefWidth="122.0" text="账户">
+                              <TableColumn fx:id="columnAccount" prefWidth="174.0" text="账户">
                               	<cellValueFactory>
                             		<PropertyValueFactory property="account" />
                             	</cellValueFactory>
                               </TableColumn>
-                              <TableColumn fx:id="columnPassword" prefWidth="126.0" text="密码">
+                              <TableColumn fx:id="columnPassword" prefWidth="173.0" text="密码">
                             	<cellValueFactory>
                             		<PropertyValueFactory property="password" />
                             	</cellValueFactory>
                               </TableColumn>
-                              <TableColumn fx:id="columnRemark" prefWidth="212.0" text="备注">
+                              <TableColumn fx:id="columnRemark" prefWidth="125.0" text="备注">
                             	<cellValueFactory>
                             		<PropertyValueFactory property="remark" />
                             	</cellValueFactory>
@@ -126,8 +126,8 @@
                                  </GridPane.margin>
                               </Button>
                               <Button mnemonicParsing="false" onAction="#handleRefreshButton" text="刷新列表" GridPane.columnIndex="1" />
-                              <Button mnemonicParsing="false" text="删除条目" GridPane.columnIndex="2" onAction="#handleDeleteButton"/>
-                              <TextField GridPane.columnIndex="3" fx:id="deleteId"/>
+                              <Button mnemonicParsing="false" onAction="#handleDeleteButton" text="删除条目" GridPane.columnIndex="2" />
+                              <TextField fx:id="deleteId" GridPane.columnIndex="3" />
                            </children>
                         </GridPane>
                      </children>
@@ -204,23 +204,23 @@
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
                                     <Label layoutX="14.0" layoutY="27.0" text="备份服务器地址" />
-                                    <TextField layoutX="112.0" layoutY="22.0" fx:id="serverHost"/>
+                                    <TextField fx:id="serverHost" layoutX="112.0" layoutY="22.0" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                                  <children>
                                     <Label layoutX="14.0" layoutY="27.0" text="备份服务器端口" />
-                                    <TextField layoutX="112.0" layoutY="22.0" fx:id="serverPort"/>
+                                    <TextField fx:id="serverPort" layoutX="112.0" layoutY="22.0" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                                  <children>
-                                    <Button layoutX="52.0" layoutY="21.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="155.0" text="开始同步" onAction="#handleSyncButton"/>
+                                    <Button layoutX="52.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleSyncButton" prefHeight="28.0" prefWidth="155.0" text="开始同步" />
                                  </children>
                               </AnchorPane>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                                  <children>
-                                    <Button layoutX="50.0" layoutY="21.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="157.0" text="同步日志" onAction="#handleWatchLogButton"/>
+                                    <Button layoutX="50.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleWatchLogButton" prefHeight="28.0" prefWidth="157.0" text="同步日志" />
                                  </children>
                               </AnchorPane>
                            </children>
