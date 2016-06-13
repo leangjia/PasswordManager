@@ -1,6 +1,5 @@
 #PasswordManager_v2.1 Client
 ##Manage your password and keep it safe with AES
-[Latest Version Download](https://github.com/guiji9511/PasswordManager/tree/master/binary/v2.1.1)
 ##Features
 * manage your secret key
 * manage all your account and password
