@@ -1,7 +1,7 @@
 #PasswordManager_v2 Client
 ##Manage your password and keep it safe with AES
 
-[Download The Latest Reasease](https://github.com/guiji9511/PasswordManager/releases/download/2.0.2/PM_v211.tar.bz2)
+[Download The Latest Reasease](https://github.com/guiji9511/PasswordManager/releases/download/2.0.2/PM_v202.tar.bz2)
 
 ##Features
 * manage your secret key
@@ -28,7 +28,7 @@ Version 1 can not be updated to version 2, but you can update between 2.x by ove
 #密码管理器桌面客户端
 ##AES加密确保您的数据安全
 
-[点此下载最新版本](https://github.com/guiji9511/PasswordManager/releases/download/2.0.2/PM_v211.tar.bz2)
+[点此下载最新版本](https://github.com/guiji9511/PasswordManager/releases/download/2.0.2/PM_v202.tar.bz2)
 
 ##特性
 * 秘钥管理
